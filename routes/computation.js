@@ -1,5 +1,7 @@
 var express = require('express');
 var router = express.Router();
+
+
 /* GET users listing. */
 router.get('/', function (req, res, next) {
     fake_url = "https://fake.com/path" + req.url
@@ -16,9 +18,7 @@ router.get('/', function (req, res, next) {
         res.write('<br>Math.asin() applied to ' + value + ' is ' + Math.asin(value))
         res.write('<br>Math.asinh() applied to ' + value + ' is ' + Math.asinh(value))
         res.end()
-
     }
-
 });
 
 module.exports = router;
